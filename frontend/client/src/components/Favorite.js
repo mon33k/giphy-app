@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Favorite = () => {
-
+const Favorite = (props) => {
+    console.log('thestuffs',props.component)
         return (
             <div>
-                woao
+                {props.component.map((e) => (
+                    <img src={e.url} alt={e.alt} key={e.key} />
+                ))}
             </div>
         )
 }

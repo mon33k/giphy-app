@@ -6,22 +6,21 @@ import Search from './components/Search';
 import Favorite from './components/Favorite';
 
 class App extends Component {
-
   render() {
     return (
-      <div className='container'>
-        <nav>
-          <Link to="/">Home</Link>
+      <div className='main-container'>
+        <nav className='nav-bar'>
+          <li><Link to="/">Home</Link></li>
           {"  "}
-          <Link to="/Search">Search</Link>
+          <li><Link to="/Search">Search</Link></li>
           {"  "}
-          <Link to="/favorite">Favorite</Link>
+          <li><Link to="/favorite">Favorite</Link></li>
         </nav>
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path='/Search' component={Search}/>
-          <Route path='/Favorite' component={Favorite}/>
+          <Route path='/search' component={Search}/>
+          <Route path='/favorite/:id' component={Favorite}/>
         </Switch>
       </div>
     );

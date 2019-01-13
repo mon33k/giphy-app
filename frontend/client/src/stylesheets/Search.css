@@ -1,0 +1,26 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    margin: 20px;
+}
+.search-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+.img-item-container {
+    padding: 20px;
+    display: flex;
+    overflow: scroll;
+    border: 1px solid white;
+}
+.img-item-container > .img-item {
+    width: 200px;
+    height: 200px;
+}

@@ -1,9 +1,12 @@
 import React from 'react';
+import '../stylesheets/Home.css';
+import homeImg from '../stylesheets/loop-dreams.gif';
 
 const Home = () => {
     return(
-        <div>
-            <h1> Giphy App </h1>
+        <div className='home-container'>
+            <h1 className='home-header'> Welcome To My Giphy App </h1>
+            <img className='home-img' src={homeImg} alt=''/>
         </div>
     )
 }
