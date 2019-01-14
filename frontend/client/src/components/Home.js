@@ -5,7 +5,7 @@ import homeImg from '../stylesheets/loop-dreams.gif';
 const Home = () => {
     return(
         <div className='home-container'>
-            <h1 className='home-header'> Welcome To My Giphy App </h1>
+            <h1 className='home-header'> </h1>
             <img className='home-img' src={homeImg} alt=''/>
         </div>
     )

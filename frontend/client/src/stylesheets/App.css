@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
 .main-container {
     margin: 0;
     height: 100%;
@@ -9,6 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  font-family: 'Staatliches', cursive;
 }
 .nav-bar > li {
   list-style-type: none;

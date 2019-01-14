@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -10,6 +12,7 @@
 .home-header {
     color: white;
     margin: 20px;
+    font-family: 'Staatliches', cursive;
 }
 .home-img {
     width: 500px;
