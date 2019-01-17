@@ -22,12 +22,14 @@ class App extends Component {
           {"  "}
           <li><Link to="/giphy/search">Search</Link></li>
           {"  "}
-          <li><Link to="/giphy/favorite">Favorite</Link></li>
+          <li><Link to="/giphy/random">Random</Link></li>
+          {"  "}
+          <li><Link to="/giphy/favorites">Favorite</Link></li>
         </nav>
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path='/giphy/search' component={GiphyGifs} />
+          <Route path="/giphy" component={GiphyGifs} />
         </Switch>
       </div>
     );
@@ -35,6 +37,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* <Route path='/giphy/search' render={() => <Search test={this.myMethod}/>}/>
-<Route path='/favorite/:id' component={Favorite}/> */}

@@ -16,40 +16,40 @@
 //         }
 //     }
 
-//     handleTextInput = (e) => {
-//         this.setState({
-//             searchedText: e.target.value
-//         })
-//     }
+    // handleTextInput = (e) => {
+    //     this.setState({
+    //         searchedText: e.target.value
+    //     })
+    // }
 
-//     handleSubmitText = (e) => {
-//         e.preventDefault();
+    // handleSubmitText = (e) => {
+    //     e.preventDefault();
 
-//         axios.get(`https://api.giphy.com/v1/gifs/search?api_key=EP6eZCjJPRD44EqfaWEqTQfR5XC7antV&q=${this.state.searchedText}&limit=25&offset=0&rating=G&lang=en`)
-//             .then((response) => {
-//                 response.data.data.forEach((e) => {
-//                     // if(this.state.url.length >= 25) {
-//                     //     count
-//                     // }
-//                     this.setState({
-//                         url: [...this.state.url, { url: e.images.original.url, id: e.id, title: e.title }]
-//                     })
-//                 })
-//             })
-//             .catch((error) => {
-//                 console.log(error)
-//             })
-//     }
+    //     axios.get(`https://api.giphy.com/v1/gifs/search?api_key=EP6eZCjJPRD44EqfaWEqTQfR5XC7antV&q=${this.state.searchedText}&limit=25&offset=0&rating=G&lang=en`)
+    //         .then((response) => {
+    //             response.data.data.forEach((e) => {
+    //                 // if(this.state.url.length >= 25) {
+    //                 //     count
+    //                 // }
+    //                 this.setState({
+    //                     url: [...this.state.url, { url: e.images.original.url, id: e.id, title: e.title }]
+    //                 })
+    //             })
+    //         })
+    //         .catch((error) => {
+    //             console.log(error)
+    //         })
+    // }
 
-//     handleClickImage = (e) => {
-//         let imageClicked = []
-//         let url = `favorite/${e.target.id}`
-//         this.setState({ selectedGif: url })
+    // handleClickImage = (e) => {
+    //     let imageClicked = []
+    //     let url = `favorite/${e.target.id}`
+    //     this.setState({ selectedGif: url })
 
-//         // this.setState({
-//         //     imageClicked: [...this.state.imageClicked, { url: e.target.src, alt: e.target.alt, key: e.target.id }]
-//         // })
-//     }
+    //     // this.setState({
+    //     //     imageClicked: [...this.state.imageClicked, { url: e.target.src, alt: e.target.alt, key: e.target.id }]
+    //     // })
+    // }
 
 //     render() {
 //         const { imageClicked, selectedGif } = this.state
