@@ -24,7 +24,7 @@ class RandomGif extends Component {
 
     render() {
         const { randomImgURL } = this.state
-        console.log(randomImgURL)
+
         return (
             <div className='random-container'>
                 <div className='button-container'>

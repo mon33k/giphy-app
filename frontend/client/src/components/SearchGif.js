@@ -33,9 +33,11 @@ class SearchGif extends Component {
     }
 
     handleClickImage = (e) => {
+        console.log('props', this.props)
         this.setState({
             imageClicked: [...this.state.imageClicked, { url: e.target.src, alt: e.target.alt, key: e.target.id, heartClick: true }],
         })
+        this.props.addFave(this.state.imageClicked)
     }
 
 
@@ -59,7 +61,7 @@ class SearchGif extends Component {
                         <div className='img-item-container'>
                             <img onClick={this.handleClickImage} className='img-item' src={e.url} alt={e.title} id={e.id} key={e.id} />
                             <div className='heart-img'>
-                                {<button onClick={() => {addFave(imageClicked)}}>fave</button>}
+                                {/* {<button onClick={() => {addFave(imageClicked)}}>fave</button>} */}
                             </div>
                         </div>
                     ))}

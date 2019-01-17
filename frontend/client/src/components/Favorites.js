@@ -1,17 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import '../stylesheets/Favorites.css'
 
 class Favorites extends Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     render() {
         const { favorites } = this.props
-        console.log('fave',favorites)
-        return(
-            <div>
+        favorites.shift()
+        console.log('faves', favorites)
+        return (
+            <div className='favorites-container'>
                 {favorites.map((e, i) => (
-                    <img src={e[i].url} key={e[i].key} alt={e[i].alt}/>
+                    <div className='fave-img-container'>
+                        <img className='fave-img-item' src={e[i].url} key={e[i].key} alt={e[i].alt} />
+                    </div>
                 ))}
             </div>
         )
@@ -19,3 +23,5 @@ class Favorites extends Component {
 }
 
 export default Favorites;
+
+
