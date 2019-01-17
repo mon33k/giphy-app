@@ -22,6 +22,10 @@ class RandomGif extends Component {
             })
     }
 
+    handleImageClicked = (e) => {
+        this.props.addFave({ url: e.target.src, alt: e.target.alt, key: e.target.id, heartClick: true })
+    }
+
     render() {
         const { randomImgURL } = this.state
 
@@ -33,7 +37,7 @@ class RandomGif extends Component {
 
                 <div className='random-img-container'>
                     {randomImgURL.map((e) => (
-                        <li className='img-item-container'><img className='img-item' src={e.random_ImgURL} alt={e.title} key={e.id} /></li>
+                        <li className='img-item-container'><img className='img-item' onClick={this.handleImageClicked} src={e.random_ImgURL} alt={e.title} key={e.id} /></li>
                     ))}
                 </div>
             </div>

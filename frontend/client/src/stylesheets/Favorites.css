@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+.fave-header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Staatliches';
+    font-weight: 100;
+
+}
+
 .favorites-container {
     display: flex;
     flex-direction: row;

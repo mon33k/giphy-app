@@ -27,8 +27,7 @@ class GiphyGifs extends Component {
 
     renderFavorites = () => {
         return (
-            <Favorites favorites={this.state.favorites}  />
-            // unfavoriteAGif={this.handleUnfavoriteGif}
+            <Favorites favorites={this.state.favorites} unfavoriteAGif={this.handleUnfavoriteGif} />
         )
     }
 
@@ -39,9 +38,15 @@ class GiphyGifs extends Component {
         })
     }
 
-    // handleUnfavoriteGif = (url2Delete) => {
-
-    // }
+    handleUnfavoriteGif = (url2Delete) => {
+        const unfavoriteGif = this.state.favorites.filter((elem) => url2Delete.url !== elem.url)
+        // console.log("deleted arr", unfavoriteGif)
+        // console.log('url2delete',url2Delete)
+    
+        this.setState({
+          favorites: unfavoriteGif
+        })
+    }
 
     render() {
         return(

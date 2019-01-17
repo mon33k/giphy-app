@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import giphyAPI from "../api/giphyAPI";
 import '../stylesheets/SearchGif.css'
-import emptyHeart from '../stylesheets/emptyHeart.png';
 import likedHeart from '../stylesheets/likedHeart.png';
 
 class SearchGif extends Component {
@@ -9,8 +8,7 @@ class SearchGif extends Component {
         super(props)
         this.state = {
             gifList: [],
-            searchedText: "",
-            imageClicked: [],
+            searchedText: ""
         }
     }
 
@@ -33,18 +31,10 @@ class SearchGif extends Component {
     }
 
     handleClickImage = (e) => {
-        console.log('props', this.props)
-        this.setState({
-            imageClicked: [...this.state.imageClicked, { url: e.target.src, alt: e.target.alt, key: e.target.id, heartClick: true }],
-        })
-        this.props.addFave(this.state.imageClicked)
+        this.props.addFave({ url: e.target.src, alt: e.target.alt, key: e.target.id, heartClick: true })
     }
 
-
-
     render() {
-        const { imageClicked } = this.state
-        const { addFave } = this.props
         return (
             <div className='search-container' >
                 <div className='input-container'>
@@ -60,11 +50,11 @@ class SearchGif extends Component {
                     {this.state.gifList.map((e) => (
                         <div className='img-item-container'>
                             <img onClick={this.handleClickImage} className='img-item' src={e.url} alt={e.title} id={e.id} key={e.id} />
-                            <div className='heart-img'>
-                                {/* {<button onClick={() => {addFave(imageClicked)}}>fave</button>} */}
-                            </div>
                         </div>
                     ))}
+                </div>
+                <div className='heart-img'>
+
                 </div>
             </div>
         )
